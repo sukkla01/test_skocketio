@@ -60,6 +60,7 @@ io.on('connection', function (client) {
     console.log(err)
   })
 })
+console.log('end')
 
 // var server_port = process.env.PORT || 3000;
 // server.listen(server_port, function (err) {
