@@ -64,7 +64,7 @@ io.on('connection', function (client) {
 })
 console.log('end')
 
-httpsServer.listen(444)
+httpsServer.listen(444, '0.0.0.0')
 httpServer.listen(81)
 // var server_port = process.env.PORT || 3000;
 // server.listen(server_port, function (err) {
