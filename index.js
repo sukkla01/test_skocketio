@@ -25,8 +25,7 @@ const httpServer = require('http').createServer()
 const io = require('socket.io')(httpServer)
 
 
-httpsServer.listen(444)
-httpServer.listen(81)
+
 
 io.on("error", console.error);
 io.on('connection', function (client) {
@@ -65,6 +64,8 @@ io.on('connection', function (client) {
 })
 console.log('end')
 
+httpsServer.listen(444)
+httpServer.listen(81)
 // var server_port = process.env.PORT || 3000;
 // server.listen(server_port, function (err) {
 //   if (err) throw err
