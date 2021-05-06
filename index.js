@@ -10,7 +10,6 @@ const http = require('http')
 const path = require("path")
 
 const https = require('https')
-const io = require('socket.io')(server)
 const fs = require('fs');
 
 
@@ -23,6 +22,7 @@ const credential = {
  
 const httpsServer = https.createServer(credential,app)
 const httpServer = require('http').createServer()
+const io = require('socket.io')(httpServer)
 
 
 httpsServer.listen(444)
