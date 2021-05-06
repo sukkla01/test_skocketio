@@ -37,6 +37,8 @@ io.on('connection', function (client) {
     io.emit('typing', data)
   })
 
+  ocket.on("error", console.error);
+
   client.on('message', function name(data) {
     console.log(data);
     io.emit('message', data)
