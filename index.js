@@ -28,6 +28,7 @@ const io = require('socket.io')(httpServer)
 httpsServer.listen(444)
 httpServer.listen(81)
 
+io.on("error", console.error);
 io.on('connection', function (client) {
 
   console.log('client connect...', client.id);
@@ -37,7 +38,7 @@ io.on('connection', function (client) {
     io.emit('typing', data)
   })
 
-  ocket.on("error", console.error);
+
 
   client.on('message', function name(data) {
     console.log(data);
