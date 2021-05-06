@@ -7,10 +7,8 @@ const bodyParser = require('body-parser')
 // const mysql = require('mysql')
 // const myConnection = require('express-myconnection')
 const http = require('http')
-var https  = require('https');
 const path = require("path")
 
-const server = require('http').createServer()
 const https = require('https')
 const io = require('socket.io')(server)
 const fs = require('fs');
@@ -24,8 +22,11 @@ const credential = {
 };
  
 const httpsServer = https.createServer(credential,app)
+const httpServer = require('http').createServer()
+
 
 httpsServer.listen(444)
+httpServer.listen(81)
 
 io.on('connection', function (client) {
 
